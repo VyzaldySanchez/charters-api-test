@@ -3,7 +3,7 @@
 var Hapi = require('hapi'),
   Joi = require('joi'),
   app = new Hapi.Server(),
-  port = process.env.PORT || 3000,
+  port = (process.env.PORT || 3000),
   pack = require('./package'),
   mongoose = require('mongoose'),
   chartersRoutes = require('./lib/routers/charters'),
