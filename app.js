@@ -11,16 +11,16 @@ var Hapi = require('hapi'),
     apiVersion: pack.version,
     documentationPath: '/documentation'
   },
-  dbUrl = 'mongodb://heroku_9c30tsbk:rvanpohs97tmlmr4bhfkn404un@ds033143.mongolab.com:33143/heroku_9c30tsbk
-',
-dbOptions = {
-  db: {
-    native_parser: true
-  },
-  server: {
-    poolSize: 5
-  }
-};
+  dbUrl =
+  'mongodb://heroku_9c30tsbk:rvanpohs97tmlmr4bhfkn404un@ds033143.mongolab.com:33143/heroku_9c30tsbk',
+  dbOptions = {
+    db: {
+      'native_parser': true
+    },
+    server: {
+      poolSize: 5
+    }
+  };
 
 app.connection({
   port: port
@@ -103,7 +103,8 @@ app.route([{
       params: {
         id: Joi.string()
           .required()
-          .description('The id to search to delete a charter with this id')
+          .description(
+            'The id to search to delete a charter with this id')
       }
     },
     tags: ['api', 'charters'],
@@ -123,7 +124,10 @@ app.register([{
 
 
     mongoose.connect(dbUrl, dbOptions, function(err) {
-      if (err) app.log('error', err);
+      if (err) {
+        app.log('error', err);
+      }
+
       app.start(function() {
         console.log('App running on port', port);
       });
