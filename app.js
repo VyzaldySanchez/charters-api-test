@@ -11,15 +11,16 @@ var Hapi = require('hapi'),
     apiVersion: pack.version,
     documentationPath: '/documentation'
   },
-  dbUrl = 'mongodb://localhost:27017/test',
-  dbOptions = {
-    db: {
-      native_parser: true
-    },
-    server: {
-      poolSize: 5
-    }
-  };
+  dbUrl = 'mongodb://heroku_9c30tsbk:rvanpohs97tmlmr4bhfkn404un@ds033143.mongolab.com:33143/heroku_9c30tsbk
+',
+dbOptions = {
+  db: {
+    native_parser: true
+  },
+  server: {
+    poolSize: 5
+  }
+};
 
 app.connection({
   port: port
