@@ -12,7 +12,7 @@ var Hapi = require('hapi'),
     documentationPath: '/documentation'
   },
   dbUrl =
-  'mongodb://heroku_9c30tsbk:rvanpohs97tmlmr4bhfkn404un@ds033143.mongolab.com:33143/heroku_9c30tsbk',
+  'MONGOLAB_URL OR YOUR OWN DB URL',
   dbOptions = {
     db: {
       'native_parser': true
